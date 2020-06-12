@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const HomeScreen = ({navigation}) => {
+const ProfileScreen = ({navigation}) => {
   return (
     <View style={styles.default}>
         <Text>Profile Screen</Text>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create ({
     }
 });
 
-export default HomeScreen;
+export default ProfileScreen;

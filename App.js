@@ -1,25 +1,26 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import HomeScreen from './screens/Home'
-import SettingsScreen from './screens/Settings'
-import ProfileScreen from './screens/Profile'
-
 import 'react-native-gesture-handler';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-const Stack = createStackNavigator();
+import MainTabScreen from './screens/MainTabScreen';
+
+
+const Tab = createMaterialBottomTabNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Settings" component={SettingsScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="Profile">
+        <Tab.Screen
+          name="f"
+          component={MainTabScreen}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   )
 }
